@@ -5,42 +5,42 @@ export default {
     extend: {
       colors: {
         brand: {
-          // Modern sage + white + slate
-          teal: "#1B7A5A", // primary sage
-          tealDark: "#145C44",
-          tealLight: "#E7F6EF",
-          emerald: "#1B7A5A",
-          cream: "#FFFFFF",
-          beige: "#F3F6F4",
-          gold: "#2A9D75", // brighter sage for secondary CTAs
-          goldDark: "#1B7A5A",
-          coral: "#3D9B78",
-          coralDark: "#145C44",
-          charcoal: "#334155",
-          charcoalSoft: "#64748B",
-          ink: "#0F172A",
+          // Matched to goodfurs.in CSS: orange + navy + peach cream
+          teal: "#FE7A27", // primary orange
+          tealDark: "#F87315",
+          tealLight: "#FCF0E8",
+          emerald: "#FE7A27",
+          cream: "#FFF8F3",
+          beige: "#FFE6D5",
+          gold: "#FD5A2E", // coral CTA accent
+          goldDark: "#E04A20",
+          coral: "#FD5A2E",
+          coralDark: "#F87315",
+          charcoal: "#303A41",
+          charcoalSoft: "#667479",
+          ink: "#00171F",
           white: "#FFFFFF",
         },
       },
       fontFamily: {
-        display: ['"Nunito"', "ui-sans-serif", "system-ui", "sans-serif"],
-        sans: ['"Poppins"', "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ['"Outfit"', "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ['"Outfit"', "ui-sans-serif", "system-ui", "sans-serif"],
       },
       borderRadius: {
         "4xl": "2rem",
         "5xl": "2.5rem",
       },
       boxShadow: {
-        soft: "0 10px 40px -12px rgba(27, 122, 90, 0.18)",
-        card: "0 18px 40px -18px rgba(15, 23, 42, 0.10)",
-        pop: "0 24px 50px -20px rgba(27, 122, 90, 0.28)",
+        soft: "0 10px 40px -12px rgba(254, 122, 39, 0.25)",
+        card: "0 18px 40px -18px rgba(0, 23, 31, 0.14)",
+        pop: "0 24px 50px -20px rgba(254, 122, 39, 0.35)",
       },
       backgroundImage: {
         "hero-gradient":
-          "linear-gradient(135deg, rgba(15,23,42,0.78) 0%, rgba(20,92,68,0.55) 100%)",
-        "warm-gradient": "linear-gradient(135deg, #145C44 0%, #2A9D75 100%)",
+          "linear-gradient(135deg, rgba(0,23,31,0.82) 0%, rgba(0,40,66,0.55) 55%, rgba(254,122,39,0.35) 100%)",
+        "warm-gradient": "linear-gradient(135deg, #FE7A27 0%, #FD5A2E 100%)",
         "cream-wash":
-          "radial-gradient(900px 500px at 10% 0%, #E7F6EF 0%, transparent 55%), linear-gradient(180deg, #FFFFFF 0%, #F8FAF9 100%)",
+          "radial-gradient(900px 500px at 10% 0%, #FFE6D5 0%, transparent 55%), linear-gradient(180deg, #FFF8F3 0%, #FFFFFF 100%)",
       },
       animation: {
         "float-slow": "float 7s ease-in-out infinite",
@@ -97,8 +97,8 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
         pulseSoft: {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(37, 211, 102, 0.45)" },
-          "50%": { boxShadow: "0 0 0 14px rgba(37, 211, 102, 0)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(254, 122, 39, 0.45)" },
+          "50%": { boxShadow: "0 0 0 14px rgba(254, 122, 39, 0)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "200% 0" },

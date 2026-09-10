@@ -200,7 +200,7 @@ export default function EnquiryForm({ open, onClose, puppy = null }) {
           </form>
         ) : (
           <div className="px-6 py-10 text-center">
-            <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-emerald-100 text-emerald-700">
+            <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-brand-tealLight text-brand-teal">
               <CheckCircle2 className="h-7 w-7" />
             </span>
             <h4 className="mt-5 font-display text-2xl font-700 text-brand-ink">

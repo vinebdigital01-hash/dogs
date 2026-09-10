@@ -14,6 +14,7 @@ import BlogCard from "../components/BlogCard.jsx";
 import FAQAccordion from "../components/FAQAccordion.jsx";
 import TrustStrip from "../components/TrustStrip.jsx";
 import Reveal from "../components/Reveal.jsx";
+import AnimatedWords from "../components/AnimatedWords.jsx";
 import { BREEDS } from "../data/breeds.js";
 import { PUPPIES } from "../data/puppies.js";
 import { CITIES_DATA } from "../data/cities.js";
@@ -42,22 +43,29 @@ export default function Home() {
   return (
     <>
       {/* Hero — marketplace style with real photo */}
-      <section className="relative overflow-hidden bg-white">
+      <section className="relative overflow-hidden bg-brand-ink">
         <div className="absolute inset-0">
           <img src={IMG.family} alt="" className="h-full w-full object-cover animate-ken-burns" />
-          <div className="absolute inset-0 bg-hero-gradient" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-ink/90 via-brand-ink/70 to-brand-ink/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/50 via-transparent to-brand-ink/20" />
         </div>
         <div className="section relative grid items-center gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:py-24">
-          <div className="text-white">
-            <p className="kicker !bg-white/15 !text-white">Wide range of puppies</p>
-            <h1 className="mt-4 font-display text-[clamp(2.2rem,6vw,3.75rem)] font-extrabold leading-[1.05] animate-fade-up">
-              Bring Your Puppy Friend Home Today
+          <div>
+            <p className="inline-flex animate-fade-up items-center rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
+              Wide range of puppies
+            </p>
+            <h1 className="mt-4 font-display text-[clamp(2.2rem,6vw,3.75rem)] font-extrabold leading-[1.15] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)]">
+              <AnimatedWords text="Bring Your Puppy Friend Home Today" delay={180} stagger={80} />
             </h1>
-            <p className="mt-4 max-w-lg text-base text-white/90 sm:text-lg animate-fade-up [animation-delay:120ms]">
+            <p className="mt-4 max-w-lg animate-fade-up text-base text-white/95 sm:text-lg [animation-delay:900ms]">
               Find a happy partner for you — healthy purebred puppies with clear details from Madhav Kennal.
             </p>
-            <Link to="/puppies" className="btn-gold mt-8 group animate-fade-up [animation-delay:220ms]">
-              Explore Puppies <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            <Link
+              to="/puppies"
+              className="btn-primary mt-8 group animate-scale-in [animation-delay:1100ms]"
+            >
+              Explore Puppies
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
             </Link>
           </div>
           <Reveal variant="zoom" className="mx-auto w-full max-w-md overflow-hidden rounded-[2rem] shadow-pop ring-4 ring-white/30">

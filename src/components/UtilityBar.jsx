@@ -13,7 +13,7 @@ export default function UtilityBar() {
           href={`tel:${OWNER_PHONE_NUMBER.replace(/\s/g, "")}`}
           className="inline-flex items-center gap-1.5 font-medium text-white/90 hover:text-white"
         >
-          <Phone className="h-3.5 w-3.5 text-brand-gold" />
+          <Phone className="h-3.5 w-3.5 text-brand-teal" />
           Need Help? {OWNER_PHONE_NUMBER}
         </a>
         <label className="inline-flex items-center gap-2">

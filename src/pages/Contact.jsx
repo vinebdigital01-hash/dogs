@@ -71,7 +71,7 @@ export default function Contact() {
             </h2>
 
             {sent ? (
-              <div className="mt-8 rounded-3xl bg-emerald-50 p-6 text-emerald-800">
+              <div className="mt-8 rounded-3xl bg-brand-tealLight p-6 text-brand-ink">
                 <p className="font-display text-xl font-700">Thank you!</p>
                 <p className="mt-2 text-sm">
                   Your enquiry has opened in WhatsApp. If it didn't open,{" "}

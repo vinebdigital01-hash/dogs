@@ -23,7 +23,7 @@ const ITEMS = [
   },
   {
     icon: HandHeart,
-    color: "bg-emerald-100 text-emerald-700",
+    color: "bg-brand-beige text-brand-tealDark",
     title: "Support",
     desc: "We're here to support you through every step of your puppy journey.",
   },
