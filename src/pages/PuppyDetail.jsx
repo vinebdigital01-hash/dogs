@@ -36,7 +36,7 @@ export default function PuppyDetail() {
 
   const breed = getBreedByName(puppy.breed);
   const related = getRelatedPuppies(puppy, 4);
-  const images = puppy.images?.length ? puppy.images : ["/images/lab-1.jpg"];
+  const images = puppy.images?.length ? puppy.images : ["/images/lab-1.webp"];
 
   return (
     <>

@@ -1,21 +1,21 @@
-/** Local assets from /public/images */
+/** Local assets from /public/images (WebP, compressed for fast loads) */
 
 export const IMG = {
-  husky: ["/images/husky-1.jpg", "/images/husky-2.jpg", "/images/husky-3.jpg"],
-  beagle: ["/images/beagle-1.jpg", "/images/beagle-2.jpg", "/images/beagle-3.jpg"],
-  lab: ["/images/lab-1.jpg", "/images/lab-2.jpg", "/images/lab-3.jpg", "/images/lab-4.jpg"],
-  golden: ["/images/golden-1.jpg", "/images/golden-2.jpg", "/images/golden-3.jpg", "/images/golden-4.jpg"],
-  shihtzu: ["/images/shihtzu-1.jpg", "/images/shihtzu-2.jpg", "/images/shihtzu-3.jpg"],
-  pom: ["/images/pom-1.jpg", "/images/pom-2.jpg", "/images/pom-3.jpg"],
-  gsd: ["/images/gsd-1.jpg", "/images/gsd-2.jpg", "/images/gsd-3.jpg", "/images/gsd-4.jpg"],
-  pug: ["/images/pug-1.jpg", "/images/pug-2.jpg", "/images/pug-3.jpg"],
-  frenchie: ["/images/frenchie-1.jpg", "/images/frenchie-2.jpg", "/images/frenchie-3.jpg"],
-  rottie: ["/images/rottie-1.jpg", "/images/rottie-2.jpg", "/images/rottie-3.jpg"],
-  dobe: ["/images/dobe-1.jpg", "/images/dobe-2.jpg", "/images/dobe-3.jpg"],
-  cocker: ["/images/cocker-1.jpg", "/images/cocker-2.jpg", "/images/cocker-3.jpg"],
-  family: "/images/family-1.jpg",
-  sleep: "/images/sleep-1.jpg",
-  people: ["/images/person-1.jpg", "/images/person-2.jpg", "/images/person-3.jpg", "/images/person-4.jpg"],
+  husky: ["/images/husky-1.webp", "/images/husky-2.webp", "/images/husky-3.webp"],
+  beagle: ["/images/beagle-1.webp", "/images/beagle-2.webp", "/images/beagle-3.webp"],
+  lab: ["/images/lab-1.webp", "/images/lab-2.webp", "/images/lab-3.webp", "/images/lab-4.webp"],
+  golden: ["/images/golden-1.webp", "/images/golden-2.webp", "/images/golden-3.webp", "/images/golden-4.webp"],
+  shihtzu: ["/images/shihtzu-1.webp", "/images/shihtzu-2.webp", "/images/shihtzu-3.webp"],
+  pom: ["/images/pom-1.webp", "/images/pom-2.webp", "/images/pom-3.webp"],
+  gsd: ["/images/gsd-1.webp", "/images/gsd-2.webp", "/images/gsd-3.webp", "/images/gsd-4.webp"],
+  pug: ["/images/pug-1.webp", "/images/pug-2.webp", "/images/pug-3.webp"],
+  frenchie: ["/images/frenchie-1.webp", "/images/frenchie-2.webp", "/images/frenchie-3.webp"],
+  rottie: ["/images/rottie-1.webp", "/images/rottie-2.webp", "/images/rottie-3.webp"],
+  dobe: ["/images/dobe-1.webp", "/images/dobe-2.webp", "/images/dobe-3.webp"],
+  cocker: ["/images/cocker-1.webp", "/images/cocker-2.webp", "/images/cocker-3.webp"],
+  family: "/images/family-1.webp",
+  sleep: "/images/sleep-1.webp",
+  people: ["/images/person-1.webp", "/images/person-2.webp", "/images/person-3.webp", "/images/person-4.webp"],
 };
 
 const BREED_KEY = {
