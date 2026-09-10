@@ -1,21 +1,17 @@
 /**
  * MADHAV KENNAL — Site Configuration
- * -----------------------------------
- * All owner / business details live in this single file.
- * Change values here and they update everywhere on the site.
+ * Replace placeholders before go-live.
  */
 
 export const BRAND = {
   name: "Madhav Kennal",
-  tagline: "Find Your Perfect Puppy",
+  tagline: "Find Your Perfect Furry Companion in India",
   established: 2016,
   description:
-    "Madhav Kennal is a professional puppy kennel dealing in all popular breeds. We help families discover loving companions and make their puppy journey simple and joyful.",
+    "Madhav Kennal helps families across India find healthy, well-cared-for purebred puppies — with clear details, warm guidance and support beyond the first day home.",
 };
 
-// ⚠️ Replace with the actual owner contact details before going live.
-// WhatsApp number MUST include country code and NO plus sign / spaces.
-export const OWNER_WHATSAPP_NUMBER = "919999999999"; // e.g. 91XXXXXXXXXX
+export const OWNER_WHATSAPP_NUMBER = "919999999999";
 export const OWNER_PHONE_NUMBER = "+91 99999 99999";
 export const OWNER_EMAIL = "hello@madhavkennal.com";
 
@@ -23,27 +19,46 @@ export const LOCATION = {
   city: "Delhi NCR",
   address: "Madhav Kennal, Sector 62, Noida, Uttar Pradesh 201301",
   mapsUrl: "https://maps.google.com/?q=Noida+Uttar+Pradesh",
-  hours: "Open Daily · 9:00 AM – 8:00 PM",
+  hours: "Call us 09:00–18:00",
 };
 
 export const SOCIALS = {
   instagram: "https://instagram.com/madhavkennal",
   facebook: "https://facebook.com/madhavkennal",
+  twitter: "https://twitter.com/madhavkennal",
+  pinterest: "https://pinterest.com/madhavkennal",
   youtube: "https://youtube.com/@madhavkennal",
 };
 
 export const PRICE_LIMITS = {
-  min: 5000,
-  max: 200000,
+  min: 0,
+  max: 100000,
   step: 1000,
 };
 
-// Default WhatsApp message when the visitor is not on a specific puppy page.
 export const DEFAULT_WHATSAPP_MESSAGE =
-  "Hello Madhav Kennal, I am interested in your puppies. Please share the currently available breeds.";
+  "Hello Madhav Kennal, I want to buy a puppy.";
 
-// Utility that returns a puppy-specific WhatsApp message.
 export const puppyWhatsAppMessage = (puppy) =>
   `Hello Madhav Kennal, I am interested in ${puppy.name}, ${puppy.breed}, priced at ₹${puppy.price.toLocaleString(
     "en-IN"
   )}. Please share more details.`;
+
+export const CITIES = [
+  "Delhi NCR",
+  "Mumbai",
+  "Bangalore",
+  "Pune",
+  "Chennai",
+  "Hyderabad",
+  "Jaipur",
+  "Chandigarh",
+  "Kolkata",
+  "Lucknow",
+  "Patna",
+  "Ahmedabad",
+  "Hisar",
+  "Karnal",
+  "Ambala",
+  "Panchkula",
+];

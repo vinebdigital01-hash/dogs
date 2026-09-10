@@ -1,83 +1,68 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
 import PawDecoration from "./PawDecoration.jsx";
-import {
-  BRAND,
-  LOCATION,
-  OWNER_EMAIL,
-  OWNER_PHONE_NUMBER,
-  SOCIALS,
-} from "../config/config.js";
+import { BRAND, SOCIALS } from "../config/config.js";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 bg-brand-ink text-brand-cream">
-      <div className="section grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
-        {/* Brand */}
+    <footer className="border-t border-brand-beige bg-white text-brand-charcoal">
+      <div className="section grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-gold text-brand-ink">
+            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-teal text-white">
               <PawDecoration className="h-6 w-6" />
             </span>
-            <div className="leading-tight">
-              <p className="font-display text-xl font-700">{BRAND.name}</p>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-gold">
-                Est. {BRAND.established}
-              </p>
+            <div>
+              <p className="font-display text-xl font-extrabold text-brand-ink">{BRAND.name}</p>
+              <p className="text-xs text-brand-charcoalSoft">{BRAND.tagline}</p>
             </div>
           </div>
-          <p className="mt-5 max-w-xs text-sm text-brand-cream/70">
-            A professional kennel dealing in all popular breeds. We help families
-            find the perfect four-legged companion with care and integrity.
-          </p>
-          <div className="mt-6 flex items-center gap-3">
-            <a
-              href={SOCIALS.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/5 transition hover:bg-brand-gold hover:text-brand-ink"
-            >
-              <Instagram className="h-4 w-4" />
-            </a>
-            <a
-              href={SOCIALS.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/5 transition hover:bg-brand-gold hover:text-brand-ink"
-            >
-              <Facebook className="h-4 w-4" />
-            </a>
-            <a
-              href={SOCIALS.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/5 transition hover:bg-brand-gold hover:text-brand-ink"
-            >
-              <Youtube className="h-4 w-4" />
-            </a>
+          <div className="mt-5 flex gap-3">
+            {[
+              [SOCIALS.instagram, Instagram, "Instagram"],
+              [SOCIALS.facebook, Facebook, "Facebook"],
+              [SOCIALS.youtube, Youtube, "YouTube"],
+            ].map(([href, Icon, label]) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="grid h-10 w-10 place-items-center rounded-full bg-brand-tealLight text-brand-teal transition hover:bg-brand-teal hover:text-white"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Explore */}
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">
-            Explore
-          </h4>
-          <ul className="mt-5 space-y-3 text-sm text-brand-cream/80">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-brand-teal">Shop by Breed</h4>
+          <ul className="mt-4 space-y-2 text-sm text-brand-charcoalSoft">
+            {["labrador", "german-shepherd", "golden-retriever", "shih-tzu", "siberian-husky"].map((slug) => (
+              <li key={slug}>
+                <Link to={`/breed/${slug}`} className="capitalize hover:text-brand-teal">
+                  {slug.replace(/-/g, " ")}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-brand-teal">Quick Links</h4>
+          <ul className="mt-4 space-y-2 text-sm text-brand-charcoalSoft">
             {[
-              ["Home", "/"],
-              ["All Puppies", "/puppies"],
-              ["Browse Breeds", "/breeds"],
-              ["About Us", "/about"],
-              ["Why Choose Us", "/why-choose-us"],
-              ["Contact", "/contact"],
+              ["About Us", "/about-us"],
+              ["FAQs", "/faqs"],
+              ["Blogs", "/blogs"],
+              ["How to Sell?", "/selling-pet"],
+              ["How to Buy?", "/buying-pet"],
             ].map(([label, to]) => (
               <li key={to}>
-                <Link to={to} className="transition hover:text-brand-gold">
+                <Link to={to} className="hover:text-brand-teal">
                   {label}
                 </Link>
               </li>
@@ -85,86 +70,28 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Popular Breeds */}
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">
-            Popular Breeds
-          </h4>
-          <ul className="mt-5 grid grid-cols-2 gap-x-3 gap-y-3 text-sm text-brand-cream/80">
-            {[
-              "Golden Retriever",
-              "Labrador",
-              "German Shepherd",
-              "Shih Tzu",
-              "Pomeranian",
-              "Siberian Husky",
-              "Beagle",
-              "Pug",
-            ].map((b) => (
-              <li key={b}>
-                <Link
-                  to={`/puppies?breed=${encodeURIComponent(b)}`}
-                  className="transition hover:text-brand-gold"
-                >
-                  {b}
-                </Link>
-              </li>
-            ))}
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-brand-teal">Explore</h4>
+          <ul className="mt-4 space-y-2 text-sm text-brand-charcoalSoft">
+            <li><Link to="/puppies" className="hover:text-brand-teal">All Puppies</Link></li>
+            <li><Link to="/sell" className="hover:text-brand-teal">List a Puppy</Link></li>
+            <li><Link to="/login" className="hover:text-brand-teal">Login / Signup</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-brand-teal">Privacy Policy</Link></li>
+            <li><Link to="/terms-conditions" className="hover:text-brand-teal">Terms of Use</Link></li>
           </ul>
-        </div>
-
-        {/* Contact */}
-        <div>
-          <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">
-            Contact
-          </h4>
-          <ul className="mt-5 space-y-4 text-sm text-brand-cream/80">
-            <li className="flex items-start gap-3">
-              <Phone className="mt-0.5 h-4 w-4 text-brand-gold" />
-              <a
-                href={`tel:${OWNER_PHONE_NUMBER.replace(/\s/g, "")}`}
-                className="hover:text-brand-gold"
-              >
-                {OWNER_PHONE_NUMBER}
-              </a>
-            </li>
-            <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 h-4 w-4 text-brand-gold" />
-              <a href={`mailto:${OWNER_EMAIL}`} className="hover:text-brand-gold">
-                {OWNER_EMAIL}
-              </a>
-            </li>
-            <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 text-brand-gold" />
-              <a
-                href={LOCATION.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-brand-gold"
-              >
-                {LOCATION.address}
-              </a>
-            </li>
-          </ul>
-          <p className="mt-5 rounded-2xl bg-white/5 px-4 py-3 text-xs text-brand-cream/70">
-            {LOCATION.hours}
-          </p>
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="section grid gap-3 py-6 text-center text-xs text-brand-cream/60 sm:grid-cols-3 sm:items-center">
-          <p className="sm:text-left">
-            © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
-          </p>
+      <div className="border-t border-brand-beige bg-brand-beige/40">
+        <div className="section grid gap-3 py-6 text-center text-xs text-brand-charcoalSoft sm:grid-cols-3 sm:items-center">
+          <p className="sm:text-left">© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
           <p className="sm:text-center">
-            Design by{" "}
-            <span className="font-semibold tracking-wide text-brand-gold">
-              VINE B Digital 
-            </span>
+            Design by <span className="font-semibold text-brand-teal">VINB Digital</span>
           </p>
-          <p className="hidden sm:block sm:text-right">
-            Trusted puppy kennel
+          <p className="sm:text-right">
+            <Link to="/privacy-policy" className="hover:text-brand-teal">Privacy Policy</Link>
+            {" · "}
+            <Link to="/terms-conditions" className="hover:text-brand-teal">Terms of Use</Link>
           </p>
         </div>
       </div>

@@ -1,32 +1,12 @@
+import { IMG } from "./images.js";
+
 export const GALLERY = [
-  {
-    src: "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=80",
-    caption: "Playtime in the yard",
-    aspect: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?auto=format&fit=crop&w=1200&q=80",
-    caption: "Sleepy afternoon",
-    aspect: "wide",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1200&q=80",
-    caption: "Family cuddles",
-    aspect: "square",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?auto=format&fit=crop&w=1200&q=80",
-    caption: "Close-up moments",
-    aspect: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80",
-    caption: "Outdoors & happy",
-    aspect: "wide",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1568572933382-74d440642117?auto=format&fit=crop&w=1200&q=80",
-    caption: "New best friends",
-    aspect: "square",
-  },
+  { id: 1, src: IMG.golden[0], alt: "Golden Retriever at Madhav Kennal", breed: "Golden Retriever" },
+  { id: 2, src: IMG.lab[0], alt: "Labrador puppy", breed: "Labrador" },
+  { id: 3, src: IMG.family, alt: "Family with puppy", breed: "Family" },
+  { id: 4, src: IMG.beagle[0], alt: "Beagle puppy", breed: "Beagle" },
+  { id: 5, src: IMG.husky[0], alt: "Siberian Husky", breed: "Siberian Husky" },
+  { id: 6, src: IMG.gsd[0], alt: "German Shepherd", breed: "German Shepherd" },
+  { id: 7, src: IMG.sleep, alt: "Peaceful puppy nap", breed: "Rest" },
+  { id: 8, src: IMG.pom[0], alt: "Pomeranian puppy", breed: "Pomeranian" },
 ];
